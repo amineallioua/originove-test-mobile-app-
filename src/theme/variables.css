@@ -1,2 +1,12 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+:root {
+    --ion-color-primary: #005073; /* Change Ionic primary color */
+    --ion-button-background: #005073;
+    --ion-button-border-radius: 8px;
+    --ion-button-padding-start: 10px;
+    --ion-button-padding-end: 20px;
+    --ion-button-font-size: 16px;
+    --border-radius:100px
+  }
+  ion-content {
+    --background: white;
+  }

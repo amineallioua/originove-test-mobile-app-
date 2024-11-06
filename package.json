@@ -20,9 +20,11 @@
     "@ionic/vue": "^8.0.0",
     "@ionic/vue-router": "^8.0.0",
     "ionicons": "^7.0.0",
+    "pinia": "^2.2.6",
     "swiper": "^11.1.14",
     "vue": "^3.3.0",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.0",
+    "vuetify": "^3.7.4"
   },
   "devDependencies": {
     "@capacitor/cli": "6.1.2",

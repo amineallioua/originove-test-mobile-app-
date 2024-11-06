@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
-import './main.css'; // Import Tailwind CSS
+import { createPinia } from 'pinia'
 import { IonicVue } from '@ionic/vue';
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,13 +31,25 @@ import '@ionic/vue/css/display.css';
 /* @import '@ionic/vue/css/palettes/dark.class.css'; */
 import '@ionic/vue/css/palettes/dark.system.css';
 
-/* Theme variables */
-import './theme/variables.css';
+import './main.css'; // Import Tailwind CSS
+import { createVuetify } from 'vuetify';
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
 
+// Create Vuetify instance
+const vuetify = createVuetify({
+  components,
+  directives,
+});
+const pinia = createPinia()
 const app = createApp(App)
+
   .use(IonicVue)
   .use(router);
+  
 
 router.isReady().then(() => {
+  app.use(vuetify)
+app.use(pinia)
   app.mount('#app');
 });
